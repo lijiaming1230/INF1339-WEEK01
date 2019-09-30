@@ -33,9 +33,9 @@
             document.getElementById("binary2ssd_output").innerHTML=ssd
             
             //send ssd signals to function illuminate_segements()
-            document.getElementById("segments").innerHTML=ssd
-            var bcd = illuminate (ssd)
-            document.getElementById("segments").innerHTML='done'
+            //document.getElementById("segments").innerHTML=ssd
+            illuminate (ssd)
+            //document.getElementById("segments").innerHTML='done'
         }
         
         function bin2ssd(binary) {
@@ -77,21 +77,28 @@
         }
         
         function illuminate(signals) {
-            documnet.getElementById("segments").innerHTML = signals
+            document.getElementById("segments").innerHTML = signals
             if (signals[0]=='1'){
-                documnet.getElementById("segmentA").innerHTML = 'ON'}
+                document.getElementById("segmentA").innerHTML = 'ON'}
+            else {document.getElementById("segmentA").innerHTML=''}
             if (signals[1]=='1'){
                 documnet.getElementById("segmentB").innerHTML = 'ON'}
+            else {document.getElementById("segmentB").innerHTML=''}
             if (signals[2]=='1'){
-                documnet.getElementById("segmentC").innerHTML = 'ON'}
+                document.getElementById("segmentC").innerHTML = 'ON'}
+            else {document.getElementById("segmentC").innerHTML=''}
             if (signals[3]=='1'){
-                documnet.getElementById("segmentD").innerHTML = 'ON'}
+                document.getElementById("segmentD").innerHTML = 'ON'}
+            else {document.getElementById("segmentD").innerHTML=''}
             if (signals[4]=='1'){
-                documnet.getElementById("segmentE").innerHTML = 'ON'}
+                document.getElementById("segmentE").innerHTML = 'ON'}
+            else {document.getElementById("segmentE").innerHTML=''}
             if (signals[5]=='1'){
-                documnet.getElementById("segmentF").innerHTML = 'ON'}
+                document.getElementById("segmentF").innerHTML = 'ON'}
+            else {document.getElementById("segmentF").innerHTML=''}
             if (signals[6]=='1'){
-                documnet.getElementById("segmentG").innerHTML = 'ON'}
+                document.getElementById("segmentG").innerHTML = 'ON'}
+            else {document.getElementById("segmentG").innerHTML=''}
         } 
         
         function dec2bin(decimal){
